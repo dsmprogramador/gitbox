@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git Box - Treinamento</title>
+</head>
+<body>
+    <ul>
+        <li><strong>CONFIGURAÇÕES INICIAIS DO GIT</strong></li>
+        <li>git config --global user.email "user@email.com"</li>
+        <li>git config --global user.name "username"</li>
+        <br>
+
+        <li><strong>CRIAÇÃO DA SSH KEY NO GITHUB E TRATAMENTO DE ERROS</strong></li>
+        <li>checando chaves existentes: ls -al ~/.ssh</li>
+        <li>criando uma nova chave: ssh-keygen -t ed25519 -C "email do github"</li>
+        <li>adicionando a chave ao agent: ssh-add ~/.ssh/id_ed25519 //ou nome do arquivo de criação da sshkey</li>
+        <li>in case error (Could not open a connection to your authentication agent) start ssh-agent:
+            <ul>
+                <li>eval `ssh-agent -s`</li>
+                <li>ssh-add</li>
+            </ul>
+        </li>
+        <li>copiando a chave do agent para adicionar ao github: clip < ~/.ssh/id_ed25519.pub //ou nome do arquivo de criação da sshkey
+        </li>
+        <li><small>chave criada com sucesso no github</small></li>
+        <li><small>testar com um git clone git@github.com:dsmprogramador/gitbox.git //ssh criada nesse exemplo</small></li>
+        <br>
+        
+        <li><strong>COMANDOS INICIAIS</strong></li>
+        <li>git init</li>
+        <li>git status</li>
+        <li>git add</li>
+        <li>git commit -m "Descrição do versionamento"</li>
+    </ul>
+</body>
+</html>
